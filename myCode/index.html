@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div id="card" class="visible">
+    <div class="star">⭐</div>
+    <h2 id="card__heading">
+      How did we do?
+    </h2>
+    <p id="card__message">
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </p>
+    <div class="rate">
+      <div class="values">
+        <input type="radio" name="rate" id="rate-1" value="1">
+        <label for="rate-1">1</label>
+      </div>
+      <div class="values">
+        <input type="radio" name="rate" id="rate-2" value="2">
+        <label for="rate-2">2</label>
+      </div>
+      <div class="values">
+        <input type="radio" name="rate" id="rate-3" value="3">
+        <label for="rate-3">3</label>
+      </div>
+      <div class="values">
+        <input type="radio" name="rate" id="rate-4" value="4">
+        <label for="rate-4">4</label>
+      </div>
+      <div class="values">
+        <input type="radio" name="rate" id="rate-5" value="5">
+        <label for="rate-5">5</label>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button id="button">Submit</button>
+  </div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div id="card"  >
+    <div class="card--thank-you">
+      <div class="thank-you__image"><img src="../images/illustration-thank-you.svg" alt=""></div>
+      <div class="thank-you__rating">
+        You selected x out of y
+      </div>
+      <h2 id="card__heading" class="thank-you__heading">
+        Thank-you!
+      </h2>
+      <p class="thank-you__message">
+        We appreciate you taking the time to give a rating. If you ever need more support,  
+        don&apos;t hesitate to get in touch!
+      </p>
+    </div>
+  </div>
+  <!-- Thank you state end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script defer src="main.js"></script>
+</body>
+</html>

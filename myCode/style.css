@@ -1,0 +1,193 @@
+:root {
+    --color-orange: 25, 97%, 53%;
+    --color-white: 0, 0%, 100%;
+    --color-light-grey: 217, 12%, 63%;
+    --color-medium-grey: 216, 12%, 54%;
+    --color-dark-blue: 213, 19%, 18%;
+    --color-very-dark-blue: 216, 12%, 8%;
+}
+
+body {
+    background-color: hsl(var(--color-very-dark-blue));
+    font-family: Calibri, sans-serif;
+}
+
+/* STATES */
+/*Main containers are invisible, add "visible" class to add visibility to any main component container*/
+
+.visible {
+    display: block !important;
+}
+
+
+/*CARD COMPONENT*/
+
+#card {
+    display: none;
+    box-sizing: border-box;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, hsla(var(--color-dark-blue), 100%), hsla(var(--color-dark-blue), 40%));
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#card__heading {
+    color: hsl(var(--color-white));
+}
+
+#card__message {
+    color: hsla(var(--color-light-grey), 80%)
+}
+
+/*RATING Card layout */
+button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: hsl(var(--color-orange));
+    color: hsl(var(--color-white));
+    letter-spacing: 2px;
+    border: none;
+    height: 2rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: hsl(var(--color-white));
+    color: hsl(var(--color-orange));
+}
+
+.rate {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    position: relative;
+}
+
+.value {
+    position: relative;
+}
+
+.values > input {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: hsla(var(--color-very-dark-blue), 30%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--color);
+}
+
+/* [type=radio]:checked::before {
+    
+}  */
+
+.values > label {
+    display: none;
+    
+}
+
+.values > input::before{
+    font-size: 1.2rem;
+    color: hsl(var(--color-light-grey));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.values > input:hover::before{
+    color: hsl(var(--color-white));
+}
+
+.values > input:hover{
+    background-color: hsl(var(--color-orange));
+}
+
+.values > input:checked{
+    background-color: hsl(var(--color-light-grey));
+}
+
+.values > input:checked::before{
+    color: hsl(var(--color-white));
+}
+
+#rate-1::before {
+    content: '1'
+}
+
+#rate-2::before {
+     content: '2'
+}
+
+#rate-3::before {
+     content: '3'
+}
+
+#rate-4::before {
+     content: '4'
+}
+
+#rate-5::before {
+     content: '5'
+}
+
+.attribution {
+    position: absolute;
+    color: hsl(var(--color-light-grey));
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/*THANK-YOU CARD main component*/
+
+.card--thank-you {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.thank-you__image {
+    height: 40%;
+    width: 60%;
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+     background-image: url; */
+}
+
+.thank-you__image > img{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.thank-you__rating {
+    width: 60%;
+    padding: .5rem;
+    border-radius: 15px;
+    color: hsl(var(--color-orange));
+    background-color: hsla(var(--color-very-dark-blue), 80%);
+}
+
+.thank-you__heading {
+    width: 50%;
+}
+
+.thank-you__message {
+    width: 100%;
+    color: hsl(var(--color-light-grey));
+}
